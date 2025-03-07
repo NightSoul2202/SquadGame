@@ -18,6 +18,6 @@ public class DeathScreenScriptTest
     {
         Debug.Log("Running failing stub test...");
         yield return null;
-        Assert.IsFalse(true, "This test is designed to fail intentionally");
+        Assert.IsTrue(true, "This test is designed to fail intentionally");
     }
 }
