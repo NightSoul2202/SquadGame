@@ -8,22 +8,26 @@ public class DeathScreenScript : MonoBehaviour
     public Button ExitButton;
     public Button RestartButton;
 
-    public static bool IsMenuOpen = false; // Флаг для блокировки камеры
+    public static bool IsMenuOpen = false;
 
     void Start()
+    {
+        Initialize(); // Викликаємо ініціалізацію при старті
+    }
+
+    public void Initialize() // Додаємо публічний метод Initialize
     {
         DeathScreen.SetActive(false);
         ExitButton.onClick.AddListener(Exit);
         RestartButton.onClick.AddListener(Restart);
-
-        LockCursor(true); // Блокируем курсор в начале
+        LockCursor(true);
     }
 
     public void GameOver()
     {
         DeathScreen.SetActive(true);
-        LockCursor(false); // Разблокируем курсор
-        IsMenuOpen = true; // Меню открыто ? блокируем управление
+        LockCursor(false);
+        IsMenuOpen = true;
     }
 
     public void Exit()
@@ -33,7 +37,7 @@ public class DeathScreenScript : MonoBehaviour
 
     public void Restart()
     {
-        IsMenuOpen = false; // Меню закроется после перезапуска
+        IsMenuOpen = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

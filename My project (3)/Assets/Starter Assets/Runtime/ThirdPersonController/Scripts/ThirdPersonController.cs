@@ -90,7 +90,7 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
-        private float _hp = 100f;
+
         private bool _isDead = false;
 
         // timeout deltatime
