@@ -38,7 +38,7 @@ public class DeathScreenTest2
     {
         deathScreenScript.GameOver();
         Assert.IsTrue(deathScreenScript.DeathScreen.activeSelf, "DeathScreen має бути активним");
-        Assert.IsTrue(DeathScreenScript.IsMenuOpen, "IsMenuOpen має бути false (навмисно провалено)");
+        Assert.IsFalse(DeathScreenScript.IsMenuOpen, "IsMenuOpen має бути false (навмисно провалено)");
     }
 
     [Test]
